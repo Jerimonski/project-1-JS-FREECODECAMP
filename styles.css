@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: rgb(122, 39, 115);
+    background-size: 100%;
+}
+
+#title{
+    font-size: 2rem;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxPal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkArea{
+    display: flex;
+    padding: 15px 15px 15px 15px;
+}

@@ -1,0 +1,1 @@
+const CheckPalBtn = document.getElementById("playlist-songs");
