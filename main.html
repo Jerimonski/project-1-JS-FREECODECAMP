@@ -8,17 +8,20 @@
         <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
-        <div id="title"><h2>Is it a palindroco?</h2></div>
-        <div class="boxPal">
-            <div class="checkArea">
-                <div class="textPal">
-                    <input id="text-input"></input>
-                </div>
-                <div class="btnPal">
-                    <button id="check-btn" ></input>
-                </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/564x/d9/03/0a/d9030a5696d2507a1dfb38a686ac93c2.jpg">
+            <div id="title">
+                <h1>Is it a Palindrome?</h1>
             </div>
-            <div id="result"><h3>aqui va el result</h3></div>
+            <div class="boxPal">
+                <div class="Paldiv">
+                    <label for="text-input">Enter in text to check for a palindrome:</label>
+                    <input class="palindrome-input" type="text" required></input>
+                    <button class="palindrome-btn" id="check-btn">Check</input>
+                </div>
+                <!-- THIS POP UP WHEN SOME ANSWER IS CHECKED, javascript -->
+                <div class=".results-div" id="result"><p> <strong>input</strong> is not a palindrome</p></div>
+            </div>
         </div>
     </body>
 </html>

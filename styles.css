@@ -4,27 +4,83 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-
 body{
-    background-color: rgb(122, 39, 115);
-    background-size: 100%;
+    background-color: rgb(19, 85, 144);
 }
 
-#title{
-    font-size: 2rem;
-    padding: 40px;
+.card{
+    top: 50px;
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .boxPal{
+    top: 313px;
+    position: absolute;
+    width: min(200vw, 450px);
+    min-height: 100px;
+    border-radius: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 10px 0;
 }
 
-.checkArea{
-    display: flex;
-    padding: 15px 15px 15px 15px;
+img{
+    width: min(100vw, 500px);
+    height: min(100vw, 500px);
+    border-radius: 30px;
+    display: block;
+    height: auto;
+}
+
+#title{
+    top: 10%; 
+    left: 50%; 
+    padding: 10px 20px; 
+    font-size: 20px; 
+    width: min(40vw, 300px);
+    height: min(100vw, 100px);
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%); 
+    color: #000000; 
+}
+
+label {
+    color: #0a0a23;
+    margin-bottom: 20px;
+} 
+
+.palindrome-input {
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid #5a01a7;
+}
+
+.palindrome-btn {
+    width: 90px;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #5a01a7;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2 ease;
+}
+
+.palindrome-btn:active{
+    transform: scale(0.9,0.9);
+}
+
+.results-div {
+    overflow-y: auto;
+    word-wrap: break-word;
+    min-height: 50px;
 }
