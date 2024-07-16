@@ -17,13 +17,12 @@ body{
     display: flex;
     text-align: center;
     justify-content: center;
-    background-color: bisque;
 }
 
 img{
     width: 450px;
     height: 450px;
-    border-radius: 30px;
+    border-radius: 15px;
 }
 #title{
     font-size: 1rem; 
@@ -34,8 +33,7 @@ img{
 .boxPal{
     top: 313px;
     border-radius: 30px;
-    padding: 20px;
-    margin: 10px 0;
+    padding: 10px 0px;
     position: absolute;
     flex-wrap: wrap;
     box-shadow: 0px 5px 10px rgb(0, 0, 0);
@@ -71,10 +69,4 @@ label {
 
 .palindrome-btn:active{
     transform: scale(0.9,0.9);
-}
-
-.results-div {
-    overflow-y: auto;
-    word-wrap: break-word;
-    min-height: 50px;
 }

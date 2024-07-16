@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <script src="./script.js"></script>
         <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
@@ -16,12 +15,13 @@
             <div class="boxPal">
                 <div class="Paldiv">
                     <label for="text-input"><strong>Enter in text to check for a palindrome:</strong></label>
-                    <input class="palindrome-input" type="text" required></input>
+                    <input class="palindrome-input" id="text-input" type="text" required></input>
                     <button class="palindrome-btn" id="check-btn">Check</input>
                 </div>
                 <!-- THIS POP UP WHEN SOME ANSWER IS CHECKED, javascript -->
-                <div class=".results-div" id="result"><p> <strong>input</strong> is not a palindrome</p></div>
+                <div class="results-div" id="result"><p><strong id="strong"></strong></p></div>
             </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
