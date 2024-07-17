@@ -1,57 +1,40 @@
-const textInput = document.getElementById("text-input");
-const checkButton = document.getElementById("check-btn");
-const result = document.getElementById("result");
+const userInput = document.getElementById('text-input');
+const checkPalindromeBtn = document.getElementById('check-btn');
+const resultDiv = document.getElementById('result');
 
+const checkForPalindrome = input => {
+  const originalInput = input; // Store for later output
 
+  if (input === '') {
+    alert('Please input a value');
+    return;
+  }
 
-function isPalindrome(str) {
-    // LowerCase string  and reverse string
-	const strong = document.createElement("strong");
-	let formattedStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
-	let reversedStr = formattedStr.split("").reverse().join("");
+  // Remove the previous result
+  resultDiv.replaceChildren();
 
-    // Check if strings LowerCase and reverse are the same
-	if (formattedStr === reversedStr) {
-		result.className = "results-div";
-		result.appendChild(strong);
-		return (strong.innerText = `${str} is a palindrome`);
-	} else {
-		result.className = "results-div";
-		result.appendChild(strong);
-		return (strong.innerText = `${str} is not a palindrome`);
-	}
-}
+  const lowerCaseStr = input.replace(/[^A-Za-z0-9]/gi, '').toLowerCase();
+  let resultMsg = `<strong>${originalInput}</strong> ${
+    lowerCaseStr === [...lowerCaseStr].reverse().join('') ? 'is' : 'is not'
+  } a palindrome.`;
 
-function inputValue() {
-	const str = textInput.value;
-	return str;
-}
+  const pTag = document.createElement('p');
+  pTag.className = 'user-input';
+  pTag.innerHTML = resultMsg;
+  resultDiv.appendChild(pTag);
 
-function checkBtn(event) {
-	event.preventDefault();
-	if (!textInput.value) {
-		alert("Please input a value");
-	}
-	if (textInput.value) {
-		setTimeout(() => {
-			textInput.value = "";
-			location.reload();
-		}, 3000);
-		const str = textInput.value;
-		isPalindrome(textInput.value);
-		return str;
-	}
-}
-
-// TODO -- configure enter key for palindrome checker
-const onKeyPress = (event) => {
-	// Key
-	console.log(event.key);
-	// KeyCode
-	console.log(event.keyCode);
-
-	// code
-	console.log(event.code);
+  // Show the result.
+  resultDiv.classList.remove('hidden');
 };
-textInput.addEventListener("input", inputValue);
-checkButton.addEventListener("click", checkBtn);
+
+checkPalindromeBtn.addEventListener('click', () => {
+  checkForPalindrome(userInput.value);
+  userInput.value = '';
+});
+
+userInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    checkForPalindrome(userInput.value);
+    userInput.value = '';
+  }
+});
